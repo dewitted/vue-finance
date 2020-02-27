@@ -1,11 +1,12 @@
 <template>
   <div class="main-numberpad-container">
     <div class="headerButtons">
-      <div class="headButtonsStyle" id="goBack"></div>
+      <router-link to="/">
+        <div class="headButtonsStyle" id="goBack"></div>
+      </router-link>
       <div class="headButtonsStyle" id="addSum"></div>
     </div>
     <input placeholder="$0.00" v-model="amount" value />
-    <h3>PlaceHolder</h3>
     <div class="numPad">
       <div class="categoryButtons">
         <div
@@ -32,20 +33,6 @@
     </div>
   </div>
 </template>
-
-    <!-- <div class="finance-buttons">
-      <div
-        class="toAdd"
-        :id="section.name"
-        v-for="section in allFinances"
-        :key="section.name"
-        @click="sectionClick(section.name)"
-      >{{section.name}}</div>
-    </div>
-    <form v-if="activated" id="entry" v-on:submit.prevent="addAmount(); activation()">
-      <input v-model="amount" placeholder="0.00" />
-      <button type="submit">Submit!</button>
-    </form>-->
 
 <script>
 import { mapGetters, mapActions } from "vuex";
@@ -90,7 +77,7 @@ export default {
     background-color: $redBack;
     box-sizing: border-box;
     padding: 5%;
-    padding-bottom: 600px;
+    padding-bottom: 630px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -102,6 +89,7 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       .headButtonsStyle {
         width: 35px;
         height: 35px;
