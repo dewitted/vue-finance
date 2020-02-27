@@ -11,7 +11,7 @@ export default {
 <style lang="scss">
   .main-header-container {
     width: 100%;
-    height: 112px;
+    height: 106px;
     background-color: blue;
   }
 </style>
