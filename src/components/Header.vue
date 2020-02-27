@@ -12,6 +12,5 @@ export default {
   .main-header-container {
     width: 100%;
     height: 106px;
-    background-color: blue;
   }
 </style>
